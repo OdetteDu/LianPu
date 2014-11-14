@@ -1,0 +1,16 @@
+x=load('x_test.dat');
+y=load('y_test.dat');
+
+[row,col]=size(x);
+num_features=col/2;
+correct=0;
+
+for i=1:row
+   sum=0;
+   for j=1:num_features
+       sum=sum+(x(i,j)-x(i,j+num_features))^2;
+   end
+   score=1/sqrt(sum);
+   if (score>0.5)
+       
+end
