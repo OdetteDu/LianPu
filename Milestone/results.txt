@@ -2,4 +2,4 @@ results
 model	train_accu	test_accu	#iter
 SVM		0.9343		0.6102		78
 NBase	0.6533		0.5678		N.A
-LogiR	0.6423		0.5424		22
+LogiR	0.9343		0.6610		610
