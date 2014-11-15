@@ -7,4 +7,5 @@ x_test=load('x_test.dat');
 y_test=load('y_test.dat');
 
 
+[predicted_label_1] = predict(y_train, sparse(x_train), model , 'liblinear_options');
 [predicted_label] = predict(y_test, sparse(x_test), model , 'liblinear_options');
