@@ -4,8 +4,8 @@ x_test=load('x_test.dat');
 y_test=load('y_test.dat');
 
 [num_train,num_feature]=size(x_train);
-x_train = x_train(:,[82]);
-x_test = x_test(:,[82]);
+x_train = x_train(:,[40,41,42,43,44,84,85,86,87,88]);
+x_test = x_test(:,[40,41,42,43,44,84,85,86,87,88]);
 out=zeros(num_train,2);
 for i=1:num_train
     if (y_train(i)==1)
@@ -22,7 +22,7 @@ net = newff( minmax(x_train.') , [5,2,2] , { 'logsig' 'tansig' 'purelin' } , 'tr
 net.trainParam.show = 50; 
 net.trainParam.lr = 0.01; 
 net.trainParam.epochs = 500; 
-net.trainParam.goal = 0.15; 
+net.trainParam.goal = 0.1; 
 
 %¿ªÊ¼ÑµÁ·
 [net,tr]=train(net,x_train.',out.'); 
